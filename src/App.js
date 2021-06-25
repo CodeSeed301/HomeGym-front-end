@@ -1,14 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Products from "./Components/Products";
 
 export class App extends Component {
   render() {
     return (
       <div>
-          <h1>Hello from App</h1>
+        <Products />
       </div>
-    )
+    );
   }
 }
 
-export default App
-
+export default App;
