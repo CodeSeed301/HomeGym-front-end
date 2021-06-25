@@ -6,9 +6,16 @@ import video from "./assets/videos/gym-video.mp4"
 export class Slider extends Component {
   render() {
     return (
-      <div className='videoContainer' style={{maxHeight:'500px' , overflow:'hidden', opacity:'0.95'}}>
-      <video width="100%" height="100%" loop autoPlay >
+      <div className='videoContainer' >
+        <div className='heroText'>
+          <h1>
+            HomeGym
+          </h1>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim doloribus quis repellendus eveniet itaque possimus beatae qui nulla alias deleniti odit, autem aspernatur quod eaque ex! Facilis itaque optio aperiam?</p>
+        </div>
+      <video width="100%"  loop autoPlay >
       <source src={video} type="video/mp4"/>
+      Your browser does not support the video.
       </video>
       </div>
     );
