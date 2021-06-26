@@ -13,10 +13,10 @@ export class cartSection extends Component {
     return (
       <div>
         <Card className="text-center" >
-          <Card.Header>Checkout Cart</Card.Header>
-          <Card.Body className="cartContainerBody">
+          <Card.Header className='cardHeaderProfilePage'>Checkout Cart</Card.Header>
+          <Card.Body className="cartContainerBody" >
             <Container className='cartMainContainer'>
-              <Row className='cartContainerHeader'>
+              <Row >
                 <Col>
                   <h2>My Cart</h2>
                 </Col>
@@ -26,22 +26,22 @@ export class cartSection extends Component {
               </Row>
               <Row>
                 <Col>
-                  <Row style={{ border: '2px solid black', padding: '5px', margin: '5px 0' }}>
+                  <Row className="TitleRowCart">
                     <Col>Product</Col>
                     <Col>Qunatity</Col>
                     <Col>delete</Col>
                   </Row>
-                  <Row style={{ border: '2px solid black', padding: '5px', margin: '5px 0' }}>
+                  <Row style={{ border: '1px solid whitesmoke', padding: '5px', margin: '5px 0' }}>
                     <Col>PR Name</Col>
                     <Col>Qunatity</Col>
                     <Col><img src={deletePro} alt="delete" /></Col>
                   </Row>
-                  <Row style={{ border: '2px solid black', padding: '5px', margin: '5px 0' }}>
+                  <Row style={{ border: '1px solid whitesmoke', padding: '5px', margin: '5px 0' }}>
                     <Col>PR Name</Col>
                     <Col>Qunatity</Col>
                     <Col><img src={deletePro} alt="delete" /></Col>
                   </Row>
-                  <Row style={{ border: '2px solid black', padding: '5px', margin: '5px 0' }}>
+                  <Row style={{ border: '1px solid whitesmoke', padding: '5px', margin: '5px 0' }}>
                     <Col>PR Name</Col>
                     <Col>Qunatity</Col>
                     <Col><img src={deletePro} alt="delete" /></Col>

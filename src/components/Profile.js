@@ -10,15 +10,17 @@ import Card from "react-bootstrap/Card";
 export class profile extends Component {
   render() {
     return (
-      <div>
+      <div >
         <Card className="text-center" >
-          <Card.Header>Profile Information</Card.Header>
+          <Card.Header className='cardHeaderProfilePage'  >Profile Information</Card.Header>
           <Card.Body className="profileInfoContainer">
-            <Container fluid style={{ textAlign: "center" }} >
+            <Container fluid >
               <Row>
+
                 <Col>
                   <img src="https://via.placeholder.com/1500x1500/000000" alt="" className='profileInfoImg'/>
                 </Col>
+
                 <Col>
                   <Row className="profileInfoText">
                     <div>
