@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Products from "./components/Products";
 import Home from './components/Home';
+import AboutUs from './components/AboutUs';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -25,6 +27,9 @@ export class App extends Component {
             </Route>
             <Route exact path="/products">
               <Products />
+            </Route>
+            <Route exact path="/about">
+              <AboutUs />
             </Route>
           </Switch>
           <Footer />
