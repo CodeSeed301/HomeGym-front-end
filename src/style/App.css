@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.navBar {
+  background-color: #222222;
+  flex-direction: column;
+}
+
+.navBar a {
+  color: rgb(231, 231, 231);
+  text-decoration: none;
+  padding: 5px 50px;
+  font-size: 1.3rem;
+}
+
+.navBar a:hover {
+  color: #f88e05;
+}
+
+.navBar .mainLogo {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.navBar .mainLogo:hover {
+  color: rgb(231, 231, 231)
+}
+
+.navBar .mainLogo span {
+  color: #f88e05;
+}
+
+.videoContainer {
+  max-height: 85vh;
+  overflow: hidden;
+  opacity: 1;
+  position: relative;
+  background: #ffad01;
+  text-align: left;
+}
+
+.heroText {
+  position: absolute;
+  color: rgb(233, 233, 233);
+  background-color: #00000067;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.heroText h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.heroText p {
+  max-width: 30%;
+  font-size: large;
+  font-weight: 700;
+}
+
+.cardsContainer {
+  background-image: url(https://images01.nicepage.com/b0/86/b086440b4129deee9b7e080e211e25a7.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 70vh;
+  padding: 5% 0;
+}
+
+.justify-content-md-center {
+  margin: 50px;
+}
+
+.homeCard {
+  background-image: url(https://images01.nicepage.com/a1/8f/a18f26bfaeebb534e0cd8ae11d2dbf6a.png);
+  position: relative;
+  min-height: 200px;
+  overflow: hidden;
+  color: white;
+}
+
+.homeCard img {
+  max-width: 200px;
+  position: absolute;
+  right: 0;
+}
+
+.cardText {
+  max-width: 50%;
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  text-align: left;
+}
+
+.sectionContainerRow {
+  background-image: url(https://images01.nicepage.com/10/9a/109a8e3ffe7aff9e15fa45df947429bd.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #e0e0e0;
+}
+
+.sectionContainerRow img {
+  width: 100%;
+  height: 100%;
+}
+
+.sectionContainerTextCol {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer {
+  background-color: rgb(38 42 43);
+  color: #252525;
+  text-align: center;
+  background-color: #f88e05;
+  padding-top: 25px;
+  min-height: 25vh;
+}
+
+.footer a {
+  display: block;
+}
+
+.footerCols {
+  border-right: 3px solid rgb(211, 211, 211);
+}

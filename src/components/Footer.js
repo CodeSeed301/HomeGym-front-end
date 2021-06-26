@@ -9,45 +9,42 @@ import {faInstagram, faFacebook , faTwitter, faGithub}  from '@fortawesome/free-
 export class Footer extends Component {
   render() {
     return (
-      <div>
-        <Container fluid style={{  background: "gray" }}>
-          <Row>
-            <Col lg={4}>
+      <div className='footer'>
+        <Container fluid>
+          <Row className="footerRow">
+            <Col lg={4} className="footerCols">
               <h4>About</h4>
-              <p>
-                
+              <p> 
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas et
                 molestiae voluptatem. Facere eum quaerat voluptate! Quisquam, id
                 suscipit eius maxime perspiciatis consectetur recusandae rem
                 eligendi quia necessitatibus est reiciendis.
               </p>
             </Col>
-            <Col lg={4}>
+            <Col lg={4} className="footerCols">
               <h4>Links</h4>
-              <ul>
-                <li>
+              
+                
                   <a href="#home">Home</a>
-                </li>
-                <li>
+                
+                
                   <a href="#home">Profile</a>
-                </li>
-                <li>
+                
+                
                   <a href="#home">Products</a>
-                </li>
-                <li>
+                
+                
                   <a href="#home">About us</a>
-                </li>
-              </ul>
+                
+              
             </Col>
-            <Col lg={4}>
+            <Col lg={4} className="footerCols">
               <h4>Contact Us</h4>
               <div>
                     <FontAwesomeIcon icon={faGithub} size="2x"/>
                     <FontAwesomeIcon icon={faFacebook} size="2x"/>
                     <FontAwesomeIcon icon={faTwitter} size="2x"/>
                     <FontAwesomeIcon icon={faInstagram} size="2x"/>
-               
-                  
 
                 </div>
             </Col>
