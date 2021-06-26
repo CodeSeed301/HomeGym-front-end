@@ -3,8 +3,8 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { fab } from '@fortawesome/free-brands-svg-icons'
 import {faInstagram, faFacebook , faTwitter, faGithub}  from '@fortawesome/free-brands-svg-icons'
+// import { fab } from '@fortawesome/free-brands-svg-icons'
 
 export class Footer extends Component {
   render() {
@@ -44,7 +44,7 @@ export class Footer extends Component {
                     <FontAwesomeIcon icon={faGithub} size="2x"/>
                     <FontAwesomeIcon icon={faFacebook} size="2x"/>
                     <FontAwesomeIcon icon={faTwitter} size="2x"/>
-                    <FontAwesomeIcon icon={faInstagram} size="2x"/>
+                    <FontAwesomeIcon icon={faInstagram} size="2x" />
 
                 </div>
             </Col>
