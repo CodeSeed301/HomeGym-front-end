@@ -52,7 +52,7 @@ class AboutUs extends Component {
         <div className="aboutUs">
           <div>
             <h2 className="ourStory">OUR STORY ..</h2>
-            <p span style={{ color: "#252525", fontSize: "18px" }}>
+            <p style={{ color: "#252525", fontSize: "18px" }}>
               We are <span style={{ color: "#f88e05", fontWeight: "bold" }}>CodeSeed</span> group, who met online and
               worked together to design, create<br></br> and produce this website that we are proud of.
             </p>
@@ -73,7 +73,7 @@ class AboutUs extends Component {
                         width="30"
                         height="30"
                         fill="currentColor"
-                        class="bi bi-arrow-up-circle-fill"
+                        className="bi bi-arrow-up-circle-fill"
                         viewBox="0 0 16 16"
                       >
                         <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
@@ -84,7 +84,7 @@ class AboutUs extends Component {
                         width="30"
                         height="30"
                         fill="currentColor"
-                        class="bi bi-arrow-down-circle-fill"
+                        className="bi bi-arrow-down-circle-fill"
                         viewBox="0 0 16 16"
                       >
                         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
@@ -101,7 +101,7 @@ class AboutUs extends Component {
                       <a className="icon" href="https://www.linkedin.com/in/ahmad-abudames-b1645720a/">
                         <FontAwesomeIcon className="icon" icon={faLinkedin} size="2x" />
                       </a>
-                      <a className="icon" href="">
+                      <a className="icon" href="www.instagram.com">
                         <FontAwesomeIcon className="icon" icon={faInstagram} size="2x" />
                       </a>
                     </Card.Body>
@@ -121,7 +121,7 @@ class AboutUs extends Component {
                         width="30"
                         height="30"
                         fill="currentColor"
-                        class="bi bi-arrow-up-circle-fill"
+                        className="bi bi-arrow-up-circle-fill"
                         viewBox="0 0 16 16"
                       >
                         <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
@@ -132,7 +132,7 @@ class AboutUs extends Component {
                         width="30"
                         height="30"
                         fill="currentColor"
-                        class="bi bi-arrow-down-circle-fill"
+                        className="bi bi-arrow-down-circle-fill"
                         viewBox="0 0 16 16"
                       >
                         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
@@ -149,7 +149,7 @@ class AboutUs extends Component {
                       <a className="icon" href="https://www.linkedin.com/in/yaser-al-ananbeh/">
                         <FontAwesomeIcon className="icon" icon={faLinkedin} size="2x" />
                       </a>
-                      <a className="icon" href="">
+                      <a className="icon" href="www.instagram.com">
                         <FontAwesomeIcon className="icon" icon={faInstagram} size="2x" />
                       </a>
                     </Card.Body>
@@ -169,7 +169,7 @@ class AboutUs extends Component {
                         width="30"
                         height="30"
                         fill="currentColor"
-                        class="bi bi-arrow-up-circle-fill"
+                        className="bi bi-arrow-up-circle-fill"
                         viewBox="0 0 16 16"
                       >
                         <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
@@ -180,7 +180,7 @@ class AboutUs extends Component {
                         width="30"
                         height="30"
                         fill="currentColor"
-                        class="bi bi-arrow-down-circle-fill"
+                        className="bi bi-arrow-down-circle-fill"
                         viewBox="0 0 16 16"
                       >
                         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
@@ -197,7 +197,7 @@ class AboutUs extends Component {
                       <a className="icon" href="https://www.linkedin.com/in/leenhazaimeh/">
                         <FontAwesomeIcon className="icon" icon={faLinkedin} size="2x" />
                       </a>
-                      <a className="icon" href="">
+                      <a className="icon" href="www.instagram.com">
                         <FontAwesomeIcon className="icon" icon={faInstagram} size="2x" />
                       </a>
                     </Card.Body>
@@ -219,7 +219,7 @@ class AboutUs extends Component {
                         width="30"
                         height="30"
                         fill="currentColor"
-                        class="bi bi-arrow-up-circle-fill"
+                        className="bi bi-arrow-up-circle-fill"
                         viewBox="0 0 16 16"
                       >
                         <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
@@ -230,7 +230,7 @@ class AboutUs extends Component {
                         width="30"
                         height="30"
                         fill="currentColor"
-                        class="bi bi-arrow-down-circle-fill"
+                        className="bi bi-arrow-down-circle-fill"
                         viewBox="0 0 16 16"
                       >
                         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
@@ -247,7 +247,7 @@ class AboutUs extends Component {
                       <a className="icon" href="https://www.linkedin.com/in/mahmoudaldinah">
                         <FontAwesomeIcon className="icon" icon={faLinkedin} size="2x" />
                       </a>
-                      <a className="icon" href="">
+                      <a className="icon" href="www.instagram.com">
                         <FontAwesomeIcon className="icon" icon={faInstagram} size="2x" />
                       </a>
                     </Card.Body>
@@ -267,7 +267,7 @@ class AboutUs extends Component {
                         width="30"
                         height="30"
                         fill="currentColor"
-                        class="bi bi-arrow-up-circle-fill"
+                        className="bi bi-arrow-up-circle-fill"
                         viewBox="0 0 16 16"
                       >
                         <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
@@ -278,7 +278,7 @@ class AboutUs extends Component {
                         width="30"
                         height="30"
                         fill="currentColor"
-                        class="bi bi-arrow-down-circle-fill"
+                        className="bi bi-arrow-down-circle-fill"
                         viewBox="0 0 16 16"
                       >
                         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
@@ -295,7 +295,7 @@ class AboutUs extends Component {
                       <a className="icon" href="https://www.linkedin.com/in/yaser-al-ananbeh/">
                         <FontAwesomeIcon className="icon" icon={faLinkedin} size="2x" />
                       </a>
-                      <a className="icon" href="">
+                      <a className="icon" href="www.instagram.com">
                         <FontAwesomeIcon className="icon" icon={faInstagram} size="2x" />
                       </a>
                     </Card.Body>
@@ -315,7 +315,7 @@ class AboutUs extends Component {
                         width="30"
                         height="30"
                         fill="currentColor"
-                        class="bi bi-arrow-up-circle-fill"
+                        className="bi bi-arrow-up-circle-fill"
                         viewBox="0 0 16 16"
                       >
                         <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
@@ -326,7 +326,7 @@ class AboutUs extends Component {
                         width="30"
                         height="30"
                         fill="currentColor"
-                        class="bi bi-arrow-down-circle-fill"
+                        className="bi bi-arrow-down-circle-fill"
                         viewBox="0 0 16 16"
                       >
                         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
@@ -343,7 +343,7 @@ class AboutUs extends Component {
                       <a className="icon" href="https://www.linkedin.com/in/aseel-dweedar/">
                         <FontAwesomeIcon className="icon" icon={faLinkedin} size="2x" />
                       </a>
-                      <a className="icon" href="">
+                      <a className="icon" href="www.instwww.instagram.comagram.com">
                         <FontAwesomeIcon className="icon" icon={faInstagram} size="2x" />
                       </a>
                     </Card.Body>
@@ -360,7 +360,7 @@ class AboutUs extends Component {
             ready to answer all your questions
           </p>
           <div className="contactCont">
-            <img className="emailImg" src={emailImg} />
+            <img className="emailImg" src={emailImg} alt='email' />
             <Form onSubmit={this.changeFeedBackMsg} className="contactForm">
               <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                 <Form.Label>First name</Form.Label>
