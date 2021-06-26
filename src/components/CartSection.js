@@ -7,6 +7,7 @@ import deletePro from "../assets/images/deletePro.png";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
+
 export class cartSection extends Component {
   render() {
     return (
@@ -29,36 +30,6 @@ export class cartSection extends Component {
                     <Col>Product</Col>
                     <Col>Qunatity</Col>
                     <Col>delete</Col>
-                  </Row>
-                  <Row style={{ border: '2px solid black', padding: '5px', margin: '5px 0' }}>
-                    <Col>PR Name</Col>
-                    <Col>Qunatity</Col>
-                    <Col><img src={deletePro} alt="delete" /></Col>
-                  </Row>
-                  <Row style={{ border: '2px solid black', padding: '5px', margin: '5px 0' }}>
-                    <Col>PR Name</Col>
-                    <Col>Qunatity</Col>
-                    <Col><img src={deletePro} alt="delete" /></Col>
-                  </Row>
-                  <Row style={{ border: '2px solid black', padding: '5px', margin: '5px 0' }}>
-                    <Col>PR Name</Col>
-                    <Col>Qunatity</Col>
-                    <Col><img src={deletePro} alt="delete" /></Col>
-                  </Row>
-                  <Row style={{ border: '2px solid black', padding: '5px', margin: '5px 0' }}>
-                    <Col>PR Name</Col>
-                    <Col>Qunatity</Col>
-                    <Col><img src={deletePro} alt="delete" /></Col>
-                  </Row>
-                  <Row style={{ border: '2px solid black', padding: '5px', margin: '5px 0' }}>
-                    <Col>PR Name</Col>
-                    <Col>Qunatity</Col>
-                    <Col><img src={deletePro} alt="delete" /></Col>
-                  </Row>
-                  <Row style={{ border: '2px solid black', padding: '5px', margin: '5px 0' }}>
-                    <Col>PR Name</Col>
-                    <Col>Qunatity</Col>
-                    <Col><img src={deletePro} alt="delete" /></Col>
                   </Row>
                   <Row style={{ border: '2px solid black', padding: '5px', margin: '5px 0' }}>
                     <Col>PR Name</Col>

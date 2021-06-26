@@ -33,8 +33,7 @@ export class App extends Component {
           </Switch>
           <Footer />
         </Router>
-        {/* <Home />
-        <Products /> */}
+     
       </div>
     );
   }

@@ -3,6 +3,9 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/* @import CartImage from "../assets/images/cartImage.png"; */
+
+
 .navBar {
   background-color: #222222;
   flex-direction: column;
@@ -120,7 +123,7 @@
   background-color: rgb(38 42 43);
   color: #252525;
   text-align: center;
-  background-color: #f88e05;
+  background-color: whitesmoke;
   padding-top: 25px;
   min-height: 25vh;
 }
@@ -146,7 +149,12 @@
 }
 
 .profileInfoContainer {
-  background-color: #333333;
+  /* background-color:white;
+  color:#333333; */
+
+  background-image: url(https://images01.nicepage.com/10/9a/109a8e3ffe7aff9e15fa45df947429bd.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #e0e0e0;
 }
 
@@ -156,7 +164,10 @@
   box-shadow: 0 0 10px 0px #ff7c0b;
 }
 
-.cartContainerHeader {}
+.cartContainerHeader {
+
+
+}
 
 .cartContainerHeader img {
   /* background-color: #ffad01; */
@@ -171,4 +182,9 @@
 .cartContainerBody{
   /* background:#333333;
   color:white */
+
+  background-image: url(../assets/images/cartImage.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #e0e0e0;
 }
