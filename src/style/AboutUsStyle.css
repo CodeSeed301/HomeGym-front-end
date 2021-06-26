@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+.aboutUs {
+    text-align: center;
+    background-color: #ddd;
+    padding-bottom: 40px;
+}
+
+.ourStory {
+    color: #252525;
+    padding-top: 30px;
+    font-weight: 500;
+    font-family: "Lobster", cursive;
+}
+
+.ourTeam {
+    border-bottom: 1px solid gray;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    color: #252525;
+    padding-top: 30px;
+    font-weight: 300;
+    font-family: "Lobster", cursive;
+    font-size: 28px;
+}
+
+
+/* hr.style-four {
+    z-index: 5;
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+
+hr.style-four:after {
+    z-index: 5;
+    content: "OUR TEAM";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+} */
+
+.g-4 {
+    width: 100%;
+}
+
+.personalCard {
+    padding: 10px;
+    background-color: inherit;
+    border: none;
+    margin: auto;
+}
+
+.cardHead {
+    background-color: inherit;
+    border: none;
+}
+
+.personalCard:hover {
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
+}
+
+.icon {
+    color: #f88e05;
+    padding: 0px 5px;
+}
+
+.personalImg:hover {
+    box-shadow: 4px 4px #f88f055d;
+}
+
+.comments {
+    background-image: url(https://images01.nicepage.com/10/9a/109a8e3ffe7aff9e15fa45df947429bd.png);
+    background-size: cover;
+    color: white;
+    padding: 100px;
+    text-align: center;
+}
+
+.contactCont {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.contactForm {
+    width: 100%;
+    text-align: left;
+    padding: 30px;
+}
+
+.submitButton {
+    width: 100%;
+    margin-top: 30px;
+    height: 40px;
+    background-color: inherit;
+    color: white;
+    border-color: #f88e05;
+}
+
+.emailImg {
+    width: 350px;
+    margin: auto;
+}
+
+.modal-dialog {
+    border: 1px solid black;
+}
+
+.headerModal {
+    background-color: #f88e05;
+}
+
+.bodyModal {
+    background-color: #ddd;
+}
+
+.footerModal {
+    background-color: #ddd;
+}
+
+.closeButton {
+    width: 120px;
+    background-color: black;
+    color: white;
+}
