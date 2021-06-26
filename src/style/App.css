@@ -3,6 +3,8 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/* @import CartImage from "../assets/images/cartImage.png"; */
+
 .navBar {
   background-color: #222222;
   flex-direction: column;
@@ -120,7 +122,8 @@
   background-color: rgb(38 42 43);
   color: #252525;
   text-align: center;
-  background-color: #f88e05;
+  background-color: #f88e05
+  ;
   padding-top: 25px;
   min-height: 25vh;
 }
@@ -131,4 +134,67 @@
 
 .footerCols {
   border-right: 3px solid rgb(211, 211, 211);
+}
+
+.profileInfoText {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileInfoImg {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.profileInfoContainer {
+  min-height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 100px;
+  background-image: url(https://images01.nicepage.com/10/9a/109a8e3ffe7aff9e15fa45df947429bd.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #e0e0e0;
+}
+
+.cartMainContainer {
+  padding: 20px;
+  border: 5px solid rgb(56, 56, 56);
+  box-shadow: 0 0 10px 0px #ff7c0b;
+}
+
+.cardHeaderProfilePage {
+  font-size: 1.5rem;
+}
+
+.cartContainerHeader img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.cartContainerHeader h2 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.cartContainerBody {
+  background-image: url(../assets/images/cartImage.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #e0e0e0;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.TitleRowCart {
+  border: 2px solid black;
+  padding: 5px;
+  margin: 5px 0;
+  background: #f88e05;
+  font-size: 1.3rem
 }
