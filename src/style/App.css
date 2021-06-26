@@ -132,3 +132,43 @@
 .footerCols {
   border-right: 3px solid rgb(211, 211, 211);
 }
+
+.profileInfoText {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileInfoImg {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.profileInfoContainer {
+  background-color: #333333;
+  color: #e0e0e0;
+}
+
+.cartMainContainer {
+  padding: 20px;
+  border: 5px solid rgb(56, 56, 56);
+  box-shadow: 0 0 10px 0px #ff7c0b;
+}
+
+.cartContainerHeader {}
+
+.cartContainerHeader img {
+  /* background-color: #ffad01; */
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.cartContainerHeader h2 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.cartContainerBody{
+  /* background:#333333;
+  color:white */
+}
