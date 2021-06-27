@@ -4,9 +4,20 @@ import Button from "react-bootstrap/Button";
 import Nav from "react-bootstrap/Nav";
 import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
+import Login from './Login';
+import Logout from './Logout';
+import { withAuth0 } from "@auth0/auth0-react";
+
+
+
 
 export class Header extends Component {
+  
   render() {
+    const { isAuthenticated } = this.props.auth0;
+   
+
+    
     return (
       <>
         <Navbar expand="lg" className='navBar' variant="dark">
@@ -15,13 +26,17 @@ export class Header extends Component {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
               <Link to="/">Home</Link>
-
-              <Link to="/profile">Profile</Link>
+                 <Link to="/profile">Profile</Link>
+              
+           
               <Link to="/products">Products</Link>
               <Link to="/about">About us</Link>
             </Nav>
             <Form>
-              <Button variant="outline-warning">Login</Button>
+              {
+                isAuthenticated ? <Logout /> : <Login />
+              }
+
             </Form>
           </Navbar.Collapse>
         </Navbar>
@@ -30,4 +45,4 @@ export class Header extends Component {
   }
 }
 
-export default Header;
+export default withAuth0(Header);

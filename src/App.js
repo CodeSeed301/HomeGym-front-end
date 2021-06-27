@@ -4,6 +4,9 @@ import Products from "./components/Products";
 import Home from './components/Home';
 import AboutUs from './components/AboutUs';
 import Profile from './components/Profile';
+import { withAuth0 } from '@auth0/auth0-react';
+import Login from './components/Login';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,6 +20,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export class App extends Component {
   render() {
+
+    const { isAuthenticated } = this.props.auth0;
     return (
       <div>
         <Router>
@@ -26,21 +31,25 @@ export class App extends Component {
               <Home />
             </Route>
             <Route exact path="/products">
+
               <Products />
+
             </Route>
             <Route exact path="/about">
               <AboutUs />
-              </Route>
+            </Route>
             <Route exact path="/profile">
+
               <Profile />
+
             </Route>
           </Switch>
           <Footer />
         </Router>
-     
+
       </div>
     );
   }
 }
 
-export default App;
+export default withAuth0(App);
