@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import OneProduct from "./OneProduct";
 import FilterData from "./FilterData";
-import axios from "axios"
+import axios from "axios";
 
 class Products extends Component {
   constructor(props) {
@@ -11,15 +11,17 @@ class Products extends Component {
       filteredData: [],
     };
   }
-  componentDidMount=()=>{
-    axios.get('http://localhost:8080/equipments').then(response=>{
-      this.setState({
-        productsData:response.data,
-        filteredData: response.data
+  componentDidMount = () => {
+    axios
+      .get("http://localhost:8080/equipments")
+      .then((response) => {
+        this.setState({
+          productsData: response.data,
+          filteredData: response.data,
+        });
       })
-      
-    }).catch((error)=>alert(error.message))
-  }
+      .catch((error) => alert(error.message));
+  };
 
   filterResult = (value) => {
     if (value === "all") {
@@ -46,6 +48,7 @@ class Products extends Component {
               description={product.description}
               price={product.price}
               key={index}
+              id={product.id}
               addToCart={this.addToCart}
             />
           );
