@@ -12,7 +12,7 @@ import "./style/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 export class App extends Component {
   render() {
-    const { isAuthenticated } = this.props.auth0;
+    // const { isAuthenticated } = this.props.auth0;
     return (
       <div>
         <Router>
