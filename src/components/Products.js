@@ -1,15 +1,24 @@
 import React, { Component } from "react";
 import OneProduct from "./OneProduct";
 import FilterData from "./FilterData";
-import Data from "../assets/data/productsData.json";
+import axios from "axios"
 
 class Products extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      productsData: Data,
-      filteredData: Data,
+      productsData: [],
+      filteredData: [],
     };
+  }
+  componentDidMount=()=>{
+    axios.get('http://localhost:8080/equipments').then(response=>{
+      this.setState({
+        productsData:response.data,
+        filteredData: response.data
+      })
+      
+    }).catch((error)=>alert(error.message))
   }
 
   filterResult = (value) => {
@@ -18,7 +27,7 @@ class Products extends Component {
         filteredData: this.state.productsData,
       });
     } else {
-      let newFilteredData = this.state.productsData.filter((product) => product.title === value);
+      let newFilteredData = this.state.productsData.filter((product) => product.name === value);
       this.setState({
         filteredData: newFilteredData,
       });
@@ -32,9 +41,10 @@ class Products extends Component {
         {this.state.filteredData.map((product, index) => {
           return (
             <OneProduct
-              title={product.title}
+              title={product.name}
               image_url={product.image_url}
               description={product.description}
+              price={product.price}
               key={index}
               addToCart={this.addToCart}
             />

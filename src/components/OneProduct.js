@@ -36,6 +36,7 @@ class OneProduct extends Component {
           <Card.Body>
             <Card.Title>{this.props.title.toUpperCase()}</Card.Title>
             <Card.Text>{this.props.description}</Card.Text>
+            <Card.Text>{this.props.price}JD</Card.Text>
             <Button variant="warning">ADD TO CART</Button>
             <Button onClick={this.setShowExercise} style={{ marginLeft: "25px" }} variant="outline-warning">
               SHOW EXERCISE
