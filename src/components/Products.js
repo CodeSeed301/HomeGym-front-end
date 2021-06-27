@@ -27,15 +27,15 @@ class Products extends Component {
 
   render() {
     return (
-      <div style={{ width: "80%", margin: "auto" }}>
+      <div style={{ width: "80%", margin: "auto"}}>
         <FilterData filterResult={this.filterResult} productsData={this.state.productsData} />
         {this.state.filteredData.map((product, index) => {
           return (
-            <OneProduct
+            <OneProduct 
               title={product.title}
               image_url={product.image_url}
               description={product.description}
-              key={index}
+              key={index}                 
               addToCart={this.addToCart}
             />
           );
