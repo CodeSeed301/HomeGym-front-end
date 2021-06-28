@@ -14,8 +14,12 @@ export class profile extends Component {
       userEmail: this.props.auth0.user.email,
       userPicture: this.props.auth0.user.picture,
       myCart: [
-        { name: "osama", qunatity: 100 },
-        { name: "aseel", qunatity: 50 },
+        { name: "osama", price: 50, quantity: 1 },
+        { name: "aseel", price: 50, quantity: 1 },
+        { name: "yaser", price: 50, quantity: 1 },
+        { name: "mahmood", price: 50, quantity: 1 },
+        { name: "ahmad", price: 50, quantity: 1 },
+        { name: "leen", price: 50, quantity: 1 },
       ],
     };
   }
@@ -24,27 +28,46 @@ export class profile extends Component {
   ///////    get Data from mongo  /////
   ////////////////////////////////////
 
-  // componentDidMount = () => {
-  //   const email=this.state.userEmail
+  componentDidMount = () => {
+    const email = this.state.userEmail;
+    axios
+      .get(`URL/read?email=${email}`)
+      .then((response) => {
+        this.setState({
+          myCart: response.data,
+        });
+      })
+      .catch((error) => alert(error.message));
+  };
 
-  //   axios
-  //     .get(`URL/read?email=${email}`)
-  //     .then((response) => {
-  //       this.setState({
-  //         myCart: response.data,
-  //       });
-  //     })
-  //     .catch((error) => alert(error.message));
-  // };
   //////////////////////////
   ///////      Delete   /////
   //////////////////////////
 
   deleteMyitem = (index) => {
     axios
-      .delete(
-        `URL/equipment/${index}?email=${this.state.userName}`
-      )
+      .delete(`URL/equipment/${index}?email=${this.state.userEmail}`)
+      .then((response) => {
+        this.setState({
+          myCart: response.data,
+        });
+      })
+      .catch((error) => alert(error.message));
+  };
+
+  //////////////////////////
+  ///////      update   /////
+  //////////////////////////
+
+  setQunValue = async (index, title, e) => {
+    const reqBody = {
+      index: index,
+      title: title,
+      quantity: Number(e.target.value),
+      email: this.state.userEmail,
+    };
+    await axios
+      .put(`URL/equipment/${index}`, reqBody)
       .then((response) => {
         this.setState({
           myCart: response.data,
@@ -57,24 +80,17 @@ export class profile extends Component {
     return (
       <div className="cont">
         <Card className="text-center">
-          <Card.Header className="cardHeaderProfilePage">
-            Profile Information
-          </Card.Header>
+          <Card.Header className="cardHeaderProfilePage"> Profile Information </Card.Header>
           <Card.Body className="profileInfoContainer">
             <Container fluid>
               <Row>
                 <Col>
-                  <img
-                    src={this.state.userPicture}
-                    alt=""
-                    className="profileInfoImg"
-                  />
+                  <img src={this.state.userPicture} alt="" className="profileInfoImg" />
                 </Col>
                 <Col>
                   <Row className="profileInfoText">
                     <div>
-                      <h2>{this.state.userName}</h2>
-                      <h4>{this.state.userEmail}</h4>
+                      <h2> {this.state.userName} </h2> <h4> {this.state.userEmail} </h4>
                     </div>
                   </Row>
                 </Col>
@@ -83,14 +99,9 @@ export class profile extends Component {
           </Card.Body>
         </Card>
         {this.state.myCart.length > 0 ? (
-          <CartSection
-           myCart={this.state.myCart} 
-           deleteMyitem ={this.deleteMyitem} 
-          
-          
-             />
+          <CartSection myCart={this.state.myCart} deleteMyitem={this.deleteMyitem} setQunValue={this.setQunValue} />
         ) : (
-          <p>no item</p>
+          <p> no item </p>
         )}
       </div>
     );

@@ -13,9 +13,7 @@ export class cartSection extends Component {
     return (
       <div>
         <Card className="text-center">
-          <Card.Header className="cardHeaderProfilePage">
-            Checkout Cart
-          </Card.Header>
+          <Card.Header className="cardHeaderProfilePage">Checkout Cart</Card.Header>
           <Card.Body className="cartContainerBody">
             <Container className="cartMainContainer">
               <Row>
@@ -30,14 +28,18 @@ export class cartSection extends Component {
                 <Col>
                   <Row className="TitleRowCart">
                     <Col>Product</Col>
-                    <Col>Qunatity</Col>
+                    <Col>Price</Col>
+                    <Col>Quantity</Col>
                     <Col>delete</Col>
                   </Row>
                   {this.props.myCart.map((item, index) => {
                     return (
-                      <RowCartSection deleteMyitem={this.props.deleteMyitem}
+                      <RowCartSection
+                        deleteMyitem={this.props.deleteMyitem}
+                        setQunValue={this.props.setQunValue}
                         name={item.name}
-                        qunatity={item.qunatity}
+                        price={item.price}
+                        quantity={item.quantity}
                         idx={index}
                         key={index}
                       />

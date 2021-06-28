@@ -202,3 +202,8 @@
 .cont {
     height: 50vh;
 }
+
+.showQuantity {
+    width: 70px;
+    display: inline-block;
+}
