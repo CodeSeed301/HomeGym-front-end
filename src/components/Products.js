@@ -8,15 +8,22 @@ class Products extends Component {
     super(props);
     this.state = {
       productsData: [],
+      cart: [],
       filteredData: [],
     };
   }
   componentDidMount = () => {
     axios
       .get("http://localhost:8080/equipments")
-      .then((response) => {
+      .then(async (response) => {
+        let cart = [];
+        if (this.props.auth0.user) {
+          let res2 = await axios.get(`http://localhost:8080/profile?email=${this.props.auth0.user.email}`);
+          cart = res2.data.equipment;
+        }
         this.setState({
           productsData: response.data,
+          cart,
           filteredData: response.data,
         });
       })
@@ -35,7 +42,22 @@ class Products extends Component {
       });
     }
   };
-
+  setCart = (productName, price) => {
+    const reqBody = {
+      email: this.props.auth0.user.email,
+      title: productName,
+      quantity: 1,
+      price: price,
+    };
+    axios
+      .post("http://localhost:8080/product", reqBody)
+      .then((respsnon) => {
+        this.setState({
+          cart: respsnon.data.equipment,
+        });
+      })
+      .catch((error) => alert(error.message));
+  };
   render() {
     return (
       <div style={{ width: "80%", margin: "auto" }}>
@@ -47,9 +69,10 @@ class Products extends Component {
               image_url={product.image_url}
               description={product.description}
               price={product.price}
-              key={product._id}
               id={product.id}
-              addToCart={this.addToCart}
+              key={index}
+              setCart={this.setCart}
+              isInCart={this.state.cart.find((cartItem) => cartItem.title === product.name)}
             />
           );
         })}
