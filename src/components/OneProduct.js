@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Exercise from "./Exercise";
+import AddToCartLogIn from "./AddToCartLogIn";
 import axios from "axios";
-
+import { withAuth0 } from "@auth0/auth0-react";
 class OneProduct extends Component {
   constructor(props) {
     super(props);
@@ -23,6 +24,8 @@ class OneProduct extends Component {
   };
 
   render() {
+    const { isAuthenticated } = this.props.auth0;
+
     return (
       <>
         <Card
@@ -42,7 +45,14 @@ class OneProduct extends Component {
             <Card.Title>{this.props.title.toUpperCase()}</Card.Title>
             <Card.Text>{this.props.description}</Card.Text>
             <Card.Text>{this.props.price}JD</Card.Text>
-            <Button variant="warning">ADD TO CART</Button>
+
+            {isAuthenticated ? (
+              <Button onClick={() => alert("Yaser")} variant="warning">
+                ADD TO CART
+              </Button>
+            ) : (
+              <AddToCartLogIn />
+            )}
             <Button
               onClick={() => this.setShowExercise(this.props.id)}
               style={{ marginLeft: "25px" }}
@@ -72,4 +82,4 @@ class OneProduct extends Component {
   }
 }
 
-export default OneProduct;
+export default withAuth0(OneProduct);
