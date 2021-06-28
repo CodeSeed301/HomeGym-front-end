@@ -3,20 +3,19 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import cartIcon from "../assets/images/cartIcon.png";
-import deletePro from "../assets/images/deletePro.png";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-
+import RowCartSection from "./RowCartSection";
 
 export class cartSection extends Component {
   render() {
     return (
       <div>
-        <Card className="text-center" >
-          <Card.Header className='cardHeaderProfilePage'>Checkout Cart</Card.Header>
-          <Card.Body className="cartContainerBody" >
-            <Container className='cartMainContainer'>
-              <Row >
+        <Card className="text-center">
+          <Card.Header className="cardHeaderProfilePage">Checkout Cart</Card.Header>
+          <Card.Body className="cartContainerBody">
+            <Container className="cartMainContainer">
+              <Row>
                 <Col>
                   <h2>My Cart</h2>
                 </Col>
@@ -28,24 +27,23 @@ export class cartSection extends Component {
                 <Col>
                   <Row className="TitleRowCart">
                     <Col>Product</Col>
-                    <Col>Qunatity</Col>
+                    <Col>Price</Col>
+                    <Col>Quantity</Col>
                     <Col>delete</Col>
                   </Row>
-                  <Row style={{ border: '1px solid whitesmoke', padding: '5px', margin: '5px 0' }}>
-                    <Col>PR Name</Col>
-                    <Col>Qunatity</Col>
-                    <Col><img src={deletePro} alt="delete" /></Col>
-                  </Row>
-                  <Row style={{ border: '1px solid whitesmoke', padding: '5px', margin: '5px 0' }}>
-                    <Col>PR Name</Col>
-                    <Col>Qunatity</Col>
-                    <Col><img src={deletePro} alt="delete" /></Col>
-                  </Row>
-                  <Row style={{ border: '1px solid whitesmoke', padding: '5px', margin: '5px 0' }}>
-                    <Col>PR Name</Col>
-                    <Col>Qunatity</Col>
-                    <Col><img src={deletePro} alt="delete" /></Col>
-                  </Row>
+                  {this.props.myCart.map((item, index) => {
+                    return (
+                      <RowCartSection
+                        deleteMyitem={this.props.deleteMyitem}
+                        setQunValue={this.props.setQunValue}
+                        name={item.title}
+                        price={item.price}
+                        quantity={item.quantity}
+                        idx={index}
+                        key={item._id}
+                      />
+                    );
+                  })}
                   <Row>
                     <Col>
                       <Button variant="outline-warning">Checkout</Button>
@@ -55,9 +53,7 @@ export class cartSection extends Component {
               </Row>
             </Container>
           </Card.Body>
-
         </Card>
-
       </div>
     );
   }

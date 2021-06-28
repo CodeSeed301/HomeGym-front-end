@@ -25,7 +25,6 @@ class OneProduct extends Component {
 
   render() {
     const { isAuthenticated } = this.props.auth0;
-
     return (
       <>
         <Card
@@ -47,9 +46,22 @@ class OneProduct extends Component {
             <Card.Text>{this.props.price}JD</Card.Text>
 
             {isAuthenticated ? (
-              <Button onClick={() => alert("Yaser")} variant="warning">
-                ADD TO CART
-              </Button>
+              this.props.isInCart ? (
+                <p
+                  style={{
+                    display: "inline-block",
+                    border: "2px solid white",
+                    padding: "6px 10px",
+                    borderRadius: "4px",
+                  }}
+                >
+                  Already added
+                </p>
+              ) : (
+                <Button onClick={() => this.props.setCart(this.props.title, this.props.price)} variant="warning">
+                  🛒 ADD TO CART
+                </Button>
+              )
             ) : (
               <AddToCartLogIn />
             )}
@@ -72,8 +84,8 @@ class OneProduct extends Component {
               gap: "5px",
             }}
           >
-            {this.state.exerciseData.map((value) => {
-              return <Exercise name={value.name} desc={value.desc} />;
+            {this.state.exerciseData.map((value, index) => {
+              return <Exercise name={value.name} desc={value.desc} image_url={value.image_url} key={index} />;
             })}
           </div>
         )}
