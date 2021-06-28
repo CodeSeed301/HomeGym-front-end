@@ -23,6 +23,21 @@ class OneProduct extends Component {
     });
   };
 
+  setCart=(productName,price) =>{
+ 
+    const reqBody={
+     email : this.props.auth0.user.email,
+     title: productName,
+     quantity: 1,
+     price: price,
+    }
+   
+   console.log(reqBody)
+  
+  // axios.post('/equipment',reqBody).then( respsnon =>{alert(`${respsnon}`)})
+  
+  }
+
   render() {
     const { isAuthenticated } = this.props.auth0;
 
@@ -47,7 +62,7 @@ class OneProduct extends Component {
             <Card.Text>{this.props.price}JD</Card.Text>
 
             {isAuthenticated ? (
-              <Button onClick={() => alert("Yaser")} variant="warning">
+              <Button onClick={()=>this.setCart(this.props.title,this.props.price)} variant="warning">
                 ADD TO CART
               </Button>
             ) : (

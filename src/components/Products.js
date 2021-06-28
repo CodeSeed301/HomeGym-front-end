@@ -2,13 +2,14 @@ import React, { Component } from "react";
 import OneProduct from "./OneProduct";
 import FilterData from "./FilterData";
 import axios from "axios";
-
+import { withAuth0 } from "@auth0/auth0-react"
 class Products extends Component {
   constructor(props) {
     super(props);
     this.state = {
       productsData: [],
       filteredData: [],
+
     };
   }
   componentDidMount = () => {
@@ -36,6 +37,10 @@ class Products extends Component {
     }
   };
 
+//  CRUD request Function
+
+
+
   render() {
     return (
       <div style={{ width: "80%", margin: "auto" }}>
@@ -43,6 +48,7 @@ class Products extends Component {
         {this.state.filteredData.map((product, index) => {
           return (
             <OneProduct
+            
               title={product.name}
               image_url={product.image_url}
               description={product.description}
@@ -58,4 +64,4 @@ class Products extends Component {
   }
 }
 
-export default Products;
+export default withAuth0(Products);
