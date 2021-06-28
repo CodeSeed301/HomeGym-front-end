@@ -13,14 +13,7 @@ export class profile extends Component {
       userName: this.props.auth0.user.name,
       userEmail: this.props.auth0.user.email,
       userPicture: this.props.auth0.user.picture,
-      myCart: [
-        { name: "osama", price: 50, quantity: 1 },
-        { name: "aseel", price: 50, quantity: 1 },
-        { name: "yaser", price: 50, quantity: 1 },
-        { name: "mahmood", price: 50, quantity: 1 },
-        { name: "ahmad", price: 50, quantity: 1 },
-        { name: "leen", price: 50, quantity: 1 },
-      ],
+      myCart: [],
     };
   }
 
@@ -31,10 +24,11 @@ export class profile extends Component {
   componentDidMount = () => {
     const email = this.state.userEmail;
     axios
-      .get(`URL/read?email=${email}`)
+      .get(`http://localhost:8080/profile?email=${email}`)
       .then((response) => {
+        console.log('didmount',response.data.equipment)
         this.setState({
-          myCart: response.data,
+          myCart: response.data.equipment,
         });
       })
       .catch((error) => alert(error.message));
@@ -46,10 +40,11 @@ export class profile extends Component {
 
   deleteMyitem = (index) => {
     axios
-      .delete(`URL/equipment/${index}?email=${this.state.userEmail}`)
+      .delete(`http://localhost:8080/product/${index}?email=${this.state.userEmail}`)
       .then((response) => {
+        console.log('deletFunction',response.data.equipment)
         this.setState({
-          myCart: response.data,
+          myCart: response.data.equipment,
         });
       })
       .catch((error) => alert(error.message));
@@ -59,18 +54,20 @@ export class profile extends Component {
   ///////      update   /////
   //////////////////////////
 
-  setQunValue = async (index, title, e) => {
+  setQunValue =  (index, title,price, e) => {
     const reqBody = {
       index: index,
       title: title,
+      price: price,
       quantity: Number(e.target.value),
       email: this.state.userEmail,
     };
-    await axios
-      .put(`URL/equipment/${index}`, reqBody)
+    
+     axios
+      .put(`http://localhost:8080/product/${index}`, reqBody)
       .then((response) => {
         this.setState({
-          myCart: response.data,
+          myCart: response.data.equipment,
         });
       })
       .catch((error) => alert(error.message));

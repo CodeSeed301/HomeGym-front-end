@@ -8,6 +8,7 @@ export class RowCartSection extends Component {
   render() {
     const idx = this.props.idx;
     const title = this.props.name;
+    const price= this.props.price;
     return (
       <>
         <Row style={{ border: "1px solid whitesmoke", padding: "5px", margin: "5px 0" }}>
@@ -17,14 +18,15 @@ export class RowCartSection extends Component {
             <Form.Control
               min="1"
               step="1"
-              onClick={(e) => this.props.setQunValue(idx, title, e)}
+              onChange={(e) => this.props.setQunValue(idx, title,price, e)}
               className="showQuantity"
               type="number"
               defaultValue={this.props.quantity}
             />
+            
           </Col>
           <Col>
-            <img src={deletePro} alt="delete" onClick={() => this.props.deleteMyitem(idx)} />
+            <img src={deletePro} alt="delete" onClick={(idx) => this.props.deleteMyitem(idx)} />
           </Col>
         </Row>
       </>

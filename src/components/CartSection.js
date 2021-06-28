@@ -37,7 +37,7 @@ export class cartSection extends Component {
                       <RowCartSection
                         deleteMyitem={this.props.deleteMyitem}
                         setQunValue={this.props.setQunValue}
-                        name={item.name}
+                        name={item.title}
                         price={item.price}
                         quantity={item.quantity}
                         idx={index}

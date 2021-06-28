@@ -11,6 +11,7 @@ class OneProduct extends Component {
     this.state = {
       showExercise: false,
       exerciseData: [],
+
     };
   }
 
@@ -32,9 +33,9 @@ class OneProduct extends Component {
      price: price,
     }
    
-   console.log(reqBody)
+  //  console.log(reqBody)
   
-  // axios.post('/equipment',reqBody).then( respsnon =>{alert(`${respsnon}`)})
+  axios.post('http://localhost:8080/product',reqBody).then( respsnon =>console.log(respsnon.data.equipment)).catch(error=>alert(error.message))
   
   }
 
