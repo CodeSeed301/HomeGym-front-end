@@ -11,7 +11,6 @@ class OneProduct extends Component {
     this.state = {
       showExercise: false,
       exerciseData: [],
-
     };
   }
 
@@ -24,24 +23,21 @@ class OneProduct extends Component {
     });
   };
 
-  setCart=(productName,price) =>{
- 
-    const reqBody={
-     email : this.props.auth0.user.email,
-     title: productName,
-     quantity: 1,
-     price: price,
-    }
-   
-  //  console.log(reqBody)
-  
-  axios.post('http://localhost:8080/product',reqBody).then( respsnon =>console.log(respsnon.data.equipment)).catch(error=>alert(error.message))
-  
-  }
+  setCart = (productName, price) => {
+    const reqBody = {
+      email: this.props.auth0.user.email,
+      title: productName,
+      quantity: 1,
+      price: price,
+    };
+    axios
+      .post("http://localhost:8080/product", reqBody)
+      .then((respsnon) => console.log(respsnon.data.equipment))
+      .catch((error) => alert(error.message));
+  };
 
   render() {
     const { isAuthenticated } = this.props.auth0;
-
     return (
       <>
         <Card
@@ -63,8 +59,8 @@ class OneProduct extends Component {
             <Card.Text>{this.props.price}JD</Card.Text>
 
             {isAuthenticated ? (
-              <Button onClick={()=>this.setCart(this.props.title,this.props.price)} variant="warning">
-                ADD TO CART
+              <Button onClick={() => this.setCart(this.props.title, this.props.price)} variant="warning">
+                🛒 ADD TO CART
               </Button>
             ) : (
               <AddToCartLogIn />

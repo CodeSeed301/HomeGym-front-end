@@ -13,7 +13,7 @@ const AddToCartLogIn = () => {
           loginWithRedirect();
         }}
       >
-        ADD TO CART
+        🛒 ADD TO CART
       </Button>
     )
   );

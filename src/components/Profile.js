@@ -26,7 +26,7 @@ export class profile extends Component {
     axios
       .get(`http://localhost:8080/profile?email=${email}`)
       .then((response) => {
-        console.log('didmount',response.data.equipment)
+        console.log("didmount", response.data.equipment);
         this.setState({
           myCart: response.data.equipment,
         });
@@ -42,7 +42,7 @@ export class profile extends Component {
     axios
       .delete(`http://localhost:8080/product/${index}?email=${this.state.userEmail}`)
       .then((response) => {
-        console.log('deletFunction',response.data.equipment)
+        console.log("deletFunction", response.data.equipment);
         this.setState({
           myCart: response.data.equipment,
         });
@@ -54,7 +54,7 @@ export class profile extends Component {
   ///////      update   /////
   //////////////////////////
 
-  setQunValue =  (index, title,price, e) => {
+  setQunValue = (index, title, price, e) => {
     const reqBody = {
       index: index,
       title: title,
@@ -62,8 +62,8 @@ export class profile extends Component {
       quantity: Number(e.target.value),
       email: this.state.userEmail,
     };
-    
-     axios
+
+    axios
       .put(`http://localhost:8080/product/${index}`, reqBody)
       .then((response) => {
         this.setState({
