@@ -9,8 +9,8 @@ class FilterData extends Component {
           <option value="all">Show All</option>
           {this.props.productsData.map((product, index) => {
             return (
-              <option key={index} value={product.title}>
-                {product.title}
+              <option key={index} value={product.name}>
+                {product.name}
               </option>
             );
           })}

@@ -2,18 +2,23 @@ import React, { Component } from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Exercise from "./Exercise";
+import axios from "axios";
 
 class OneProduct extends Component {
   constructor(props) {
     super(props);
     this.state = {
       showExercise: false,
+      exerciseData: [],
     };
   }
 
-  setShowExercise = () => {
-    this.setState({
-      showExercise: !this.state.showExercise,
+  setShowExercise = (id) => {
+    axios.get(`http://localhost:8080/exercises?equipmentId=${id}`).then((res) => {
+      this.setState({
+        exerciseData: res.data,
+        showExercise: !this.state.showExercise,
+      });
     });
   };
 
@@ -36,14 +41,32 @@ class OneProduct extends Component {
           <Card.Body>
             <Card.Title>{this.props.title.toUpperCase()}</Card.Title>
             <Card.Text>{this.props.description}</Card.Text>
+            <Card.Text>{this.props.price}JD</Card.Text>
             <Button variant="warning">ADD TO CART</Button>
-            <Button onClick={this.setShowExercise} style={{ marginLeft: "25px" }} variant="outline-warning">
+            <Button
+              onClick={() => this.setShowExercise(this.props.id)}
+              style={{ marginLeft: "25px" }}
+              variant="outline-warning"
+            >
               SHOW EXERCISE
             </Button>
           </Card.Body>
         </Card>
-
-        {this.state.showExercise && <Exercise title={this.props.title} />}
+        {this.state.showExercise && (
+          <div
+            style={{
+              width: "100%",
+              padding: "10px",
+              display: "grid",
+              gridTemplateColumns: "repeat(4,4fr)",
+              gap: "5px",
+            }}
+          >
+            {this.state.exerciseData.map((value) => {
+              return <Exercise name={value.name} desc={value.desc} />;
+            })}
+          </div>
+        )}
       </>
     );
   }
