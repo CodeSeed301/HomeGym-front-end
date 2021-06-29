@@ -9,9 +9,9 @@ export class RowCartSection extends Component {
     const title = this.props.name;
     const price = this.props.price;
     return (
-      <Row style={{ border: "1px solid whitesmoke", padding: "5px", margin: "5px 0" }}>
+      <Row className="RowCartItem">
         <Col>{this.props.name}</Col>
-        <Col>{this.props.price}</Col>
+        <Col>{this.props.price} Jd</Col>
         <Col>
           <Form.Control
             min="1"
@@ -21,8 +21,9 @@ export class RowCartSection extends Component {
             value={this.props.quantity}
           />
         </Col>
+        <Col>{this.props.price*this.props.quantity} Jd</Col>
         <Col>
-          <img src={deletePro} alt="delete" onClick={() => this.props.deleteMyitem(idx)} />
+        <img src="https://img.icons8.com/material-rounded/24/000000/delete.png" onClick={() => this.props.deleteMyitem(idx)}alt="delete" style={{cursor:'pointer',color:'white'}}/>
         </Col>
       </Row>
     );

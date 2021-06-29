@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import CartSection from "./CartSection";
 import Container from "react-bootstrap/Container";
+import EmptyCart from "./EmptyCart";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
+import Alert from 'react-bootstrap/Alert'
+
 import { withAuth0 } from "@auth0/auth0-react";
 import axios from "axios";
 export class profile extends Component {
@@ -14,7 +17,22 @@ export class profile extends Component {
       userEmail: this.props.auth0.user.email,
       userPicture: this.props.auth0.user.picture,
       myCart: [],
+      alert: false,
+      showLastModel:false
     };
+  }
+  handlePlaceOrder = () => {
+    axios.delete(`http://localhost:8080/product/100?email=${this.state.userEmail}`).then(response=>console.log("ee",response.data)).then(
+      this.setState({
+        alert: true,
+        myCart: [],
+      },()=>{
+        window.setTimeout(()=>{
+          this.setState({alert:false})
+        },5000)
+      })
+    ).catch(error=>console.log("ee",error.message));
+    
   }
 
   /////////////////////////////////////
@@ -76,7 +94,7 @@ export class profile extends Component {
   render() {
     return (
       <div className="cont">
-        <Card className="text-center">
+        <Card className="text-center profileContainer">
           <Card.Header className="cardHeaderProfilePage"> Profile Information </Card.Header>
           <Card.Body className="profileInfoContainer">
             <Container fluid>
@@ -84,22 +102,31 @@ export class profile extends Component {
                 <Col>
                   <img src={this.state.userPicture} alt="" className="profileInfoImg" />
                 </Col>
-                <Col>
-                  <Row className="profileInfoText">
-                    <div>
-                      <h2> {this.state.userName} </h2> <h4> {this.state.userEmail} </h4>
-                    </div>
-                  </Row>
+                <Col className="profileInfoText">
+                  <div>
+                    <h2>{this.state.userName} </h2> <h4>{this.state.userEmail} </h4>
+                  </div>
                 </Col>
               </Row>
             </Container>
           </Card.Body>
         </Card>
+        {this.state.alert &&
+          <Alert variant="success">
+            Your Order has placed successfully 
+          </Alert>
+        }
+        {/* {this.state.showLastModel &&
+          <Alert variant="success">
+            Your Order has placed successfully 
+          </Alert>
+        } */}
         {this.state.myCart.length > 0 ? (
-          <CartSection myCart={this.state.myCart} deleteMyitem={this.deleteMyitem} setQunValue={this.setQunValue} />
+          <CartSection myCart={this.state.myCart} deleteMyitem={this.deleteMyitem} setQunValue={this.setQunValue} handlePlaceOrder={this.handlePlaceOrder} />
         ) : (
-          <p> no item </p>
+          < EmptyCart />
         )}
+        
       </div>
     );
   }

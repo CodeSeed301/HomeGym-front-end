@@ -137,15 +137,15 @@
 }
 
 .profileInfoText {
-    height: 100%;
+    min-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .profileInfoImg {
-    max-width: 200px;
-    max-height: 200px;
+    min-width: 250px;
+    max-height: 250px;
 }
 
 .profileInfoContainer {
@@ -153,26 +153,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 100px;
-    background-image: url(https://images01.nicepage.com/10/9a/109a8e3ffe7aff9e15fa45df947429bd.png);
+    padding: 20px 100px;
+    /* background-image: url(https://images01.nicepage.com/10/9a/109a8e3ffe7aff9e15fa45df947429bd.png);
     background-repeat: no-repeat;
-    background-size: cover;
-    color: #e0e0e0;
+    background-size: cover; */
+    background-color: rgb(243, 243, 243);
+    
+    color: #242424;
 }
 
 .cartMainContainer {
+    /* min-width: 85vh; */
+    max-width: 70%;
     padding: 20px;
     border: 5px solid rgb(56, 56, 56);
-    box-shadow: 0 0 10px 0px #ff7c0b;
+    /* box-shadow: 0 0 10px 0px #ff7c0b; */
 }
 
 .cardHeaderProfilePage {
     font-size: 1.5rem;
+    background-color: rgb(34, 34 ,34);
+    color: whitesmoke;
 }
 
 .cartContainerHeader img {
-    max-width: 50px;
-    max-height: 50px;
+    max-width: 30px;
+    max-height: 40px;
 }
 
 .cartContainerHeader h2 {
@@ -181,11 +187,12 @@
 }
 
 .cartContainerBody {
-    background-image: url(../assets/images/cartImage.png);
+    /* background-image: url(../assets/images/cartImage.png);
     background-repeat: no-repeat;
-    background-size: cover;
-    color: #e0e0e0;
-    min-height: 70vh;
+    background-size: cover; */
+    background-color: rgb(243, 243, 243);
+    color: #111111;
+    min-height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -195,15 +202,82 @@
     border: 2px solid black;
     padding: 5px;
     margin: 5px 0;
-    background: #f88e05;
+    background: #222222;
     font-size: 1.3rem;
-}
-
-.cont {
-    height: 50vh;
+    color: #f88e05;
 }
 
 .showQuantity {
     width: 70px;
     display: inline-block;
+}
+.RowCartItem{
+    border: 1px solid rgb(36, 36, 36); padding: 5px; margin: 5px 0;display: flex;
+    align-items: center;
+}
+.cont{
+    width:80%;
+
+    margin: 50px auto;
+}
+.profileContainer{
+    /* max-width: 80%; */
+    margin: 40px auto;
+}
+.checkoutBtn{
+    background-color: #252525;
+    color: #f88e05;
+    padding: 5px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+.checkoutBtn:hover{
+    background-color: #f88e05;
+    color: #252525;
+}
+
+.emptyCartContainer{
+    overflow: hidden;
+    border:none;
+    min-height: 70vh;
+    color: whitesmoke;
+    
+    position: relative;
+    background-color: #3a3a3ad2;
+}
+.opacityIgnoreCart img{
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.opacityIgnoreCart h2{
+    position: absolute;
+    top:30%;
+    left:50%;
+    transform: translate(-50%,50%);
+    font-size: 3rem;
+}
+
+.emptyCartBtn{
+    text-decoration: none;
+    background-color: #f88e05;
+    color: #e0e0e0;
+    padding:10px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+position: absolute;
+top:45%;
+left:50%;
+transform: translate(-50%,50%);
+}
+.emptyCartBtn:hover{
+    text-decoration: none;
+    background-color:rgb(34 34 34) ;
+    color: #f88e05;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
 }
