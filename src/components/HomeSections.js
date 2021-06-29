@@ -1,8 +1,14 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import image1 from "../assets/images/homeSec1.png";
+import Button from "react-bootstrap/Button";
+import Pic1 from "../assets/images/picSec1.png";
+import CardBlog1 from "./CardBlog1";
+import CardBlog2 from "./CardBlog2";
+import CardBlog3 from "./CardBlog3";
+import CardBlog4 from "./CardBlog4";
 
 export class HomeSections extends Component {
   render() {
@@ -11,77 +17,47 @@ export class HomeSections extends Component {
         <Container className="cardsContainer" fluid>
           <Row className="justify-content-md-center">
             <Col xs lg="4">
-              <div className="homeCard">
-                <img src="https://images01.nicepage.com/a7/74/a7748786bf152269c29724fc922de7de.png" alt="" />
-                <div className="cardText">
-                  <h3>title</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe unde nulla esse.</p>
-                </div>
-              </div>
+              <CardBlog1 />
             </Col>
-
             <Col xs lg="4">
-              <div className="homeCard">
-                <img src="https://images01.nicepage.com/49/9b/499bff19780c9550d3d77ee83694eb0c.png" alt="" />
-                <div className="cardText">
-                  <h3>title</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe unde nulla esse.</p>
-                </div>
-              </div>
+              <CardBlog2 />
             </Col>
           </Row>
           <Row className="justify-content-md-center">
             <Col xs lg="4">
-              <div className="homeCard">
-                <img src="https://images01.nicepage.com/15/e0/15e03f0cf3690350333de385012e581a.png" alt="" />
-                <div className="cardText">
-                  <h3>title</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe unde nulla esse.</p>
-                </div>
-              </div>
+              <CardBlog3 />
             </Col>
-
             <Col xs lg="4">
-              <div className="homeCard">
-                <img src="https://images01.nicepage.com/a7/74/a7748786bf152269c29724fc922de7de.png" alt="" />
-                <div className="cardText">
-                  <h3>title</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe unde nulla esse.</p>
-                </div>
-              </div>
+              <CardBlog4 />
             </Col>
           </Row>
         </Container>
         <Container fluid className="sectionContainer">
           <Row className="sectionContainerRow">
-            <Col>
-              <img src={image1} alt="random" />
-            </Col>
-
             <Col className="sectionContainerTextCol">
-              <h2>Equipments</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas et molestiae voluptatem. Facere eum
-                quaerat voluptate! Quisquam, id suscipit eius maxime perspiciatis consectetur recusandae rem eligendi
-                quia necessitatibus est reiciendis.
-              </p>
+              <div className="textHolder">
+                <h2>
+                  <span>
+                    <img
+                      style={{ width: "20%" }}
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDHFIVLvbo5pCxguPfIsVw0e0IqkIunT1bN9GEbTzMOCv5MXtL0k1xaxW425Qqzpmgojs&usqp=CAU"
+                      alt="pic1"
+                    />
+                  </span>
+                  <span className="discount">UPTO</span> 25% OFF
+                </h2>
+                <p>
+                  On the occasion of the one year anniversary of your permanent trust, and your good choice of us, 25%
+                  discount on all products. As always, HomeGym is your best choice throughout the year. Stay tuned for
+                  more upcoming surprises.
+                </p>
+                <Link to="/products">
+                  <Button variant="warning">GET THE CHANCE !!</Button>
+                </Link>
+              </div>
             </Col>
-          </Row>
-          <Row className="sectionContainerRow">
-            <Col className="sectionContainerTextCol">
-              <h2>Exercises</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas et molestiae voluptatem. Facere eum
-                quaerat voluptate! Quisquam, id suscipit eius maxime perspiciatis consectetur recusandae rem eligendi
-                quia necessitatibus est reiciendis.
-              </p>
-            </Col>
-
             <Col>
-              <img
-                src="https://www.mensjournal.com/wp-content/uploads/2018/02/home-workout.jpg?quality=86&strip=all"
-                alt="random"
-              />
+              <img className="pic1" src={Pic1} alt="random" />
             </Col>
           </Row>
         </Container>

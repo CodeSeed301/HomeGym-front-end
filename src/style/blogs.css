@@ -1,0 +1,53 @@
+.mainContainer {
+    background-color: #ddd;
+}
+
+.textCont {
+    width: 85%;
+    margin: auto;
+    background-color: inherit;
+}
+
+.mainTitle {
+    padding: 15px 0px;
+    font-size: 50px;
+    padding-top: 20px;
+    font-weight: 900;
+    color: #f88e05;
+    text-shadow: 0 0 black;
+}
+
+.firstImg {
+    width: 50%;
+    float: right;
+}
+
+.subTitles {
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+.paragraphs {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    text-indent: 30px;
+}
+
+.secondImg {
+    width: 50%;
+    float: left;
+    padding: 15px;
+}
+
+.newContainer {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 30px;
+}
+
+.alsoRead {
+    margin-left: 15px;
+    margin-top: 20px;
+    font-weight: 700;
+}
