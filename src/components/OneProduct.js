@@ -32,18 +32,20 @@ class OneProduct extends Component {
             display: "grid",
             gridTemplateColumns: "270px 1fr",
             marginTop: "30px",
-            background: "#222222",
-            color: "white",
+            background: "#eee",
+            color: "black",
             padding: "10px",
+         
+           
           }}
         >
           <Card.Body>
-            <Card.Img style={{ width: "250px" }} variant="top" src={this.props.image_url} alt={this.props.title} />
+            <Card.Img style={{ width: "250px" , maxHeight:"250px" }} variant="top" src={this.props.image_url} alt={this.props.title} />
           </Card.Body>
           <Card.Body>
-            <Card.Title>{this.props.title.toUpperCase()}</Card.Title>
+            <Card.Title style={{fontSize: "1.5rem"}}>{this.props.title.toUpperCase()}</Card.Title>
             <Card.Text>{this.props.description}</Card.Text>
-            <Card.Text>{this.props.price}JD</Card.Text>
+            <Card.Text style={{color:"red"}}>{this.props.price}JD   <s>{parseInt(this.props.price) + 100} JD</s> </Card.Text>
 
             {isAuthenticated ? (
               this.props.isInCart ? (
@@ -58,7 +60,7 @@ class OneProduct extends Component {
                   Already added
                 </p>
               ) : (
-                <Button onClick={() => this.props.setCart(this.props.title, this.props.price)} variant="warning">
+                <Button onClick={() => this.props.setCart(this.props.title, this.props.price)} variant="danger" >
                   🛒 ADD TO CART
                 </Button>
               )
@@ -67,7 +69,7 @@ class OneProduct extends Component {
             )}
             <Button
               onClick={() => this.setShowExercise(this.props.id)}
-              style={{ marginLeft: "25px" }}
+              style={{ marginLeft: "25px" , color:"black " }}
               variant="outline-warning"
             >
               SHOW EXERCISE

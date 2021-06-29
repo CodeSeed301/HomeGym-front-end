@@ -3,6 +3,7 @@ import OneProduct from "./OneProduct";
 import FilterData from "./FilterData";
 import axios from "axios";
 import { withAuth0 } from "@auth0/auth0-react";
+import "../style/Product.css";
 class Products extends Component {
   constructor(props) {
     super(props);
