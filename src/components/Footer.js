@@ -15,26 +15,27 @@ export class Footer extends Component {
             <Col lg={4} className="footerCols">
               <h4>About</h4>
               <p> 
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas et
-                molestiae voluptatem. Facere eum quaerat voluptate! Quisquam, id
-                suscipit eius maxime perspiciatis consectetur recusandae rem
-                eligendi quia necessitatibus est reiciendis.
+              We want to help you live a fit and healthy life style !
+               We do this by helping you find the most suitable equipment for your home gym ,
+                keeping your budget , life style and fitness goals in mind . 
+                we stouk a wide range of gym equipmint cardio, cross traninig and so much more .
+                 our awesome team is always keen to help , so please call us to disscuss your needs.
               </p>
             </Col>
             <Col lg={4} className="footerCols">
               <h4>Links</h4>
               
                 
-                  <a href="#home">Home</a>
+                  <a href="/Home">Home</a>
                 
                 
-                  <a href="#home">Profile</a>
+                  <a href="/profile">Profile</a>
                 
                 
-                  <a href="#home">Products</a>
+                  <a href="/products">Products</a>
                 
                 
-                  <a href="#home">About us</a>
+                  <a href="/about">About us</a>
                 
               
             </Col>

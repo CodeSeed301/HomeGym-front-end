@@ -120,7 +120,7 @@
 }
 
 .footer {
-  background-color: rgb(38 42 43);
+  background-color:solid rgb(211, 211, 211);
   color: #252525;
   text-align: center;
   background-color: whitesmoke;
@@ -130,10 +130,14 @@
 
 .footer a {
   display: block;
+  color: black;
+  text-decoration: none;
+  padding: 5px 50px;
+  font-size: 1.3rem;
 }
 
 .footerCols {
-  border-right: 3px solid rgb(211, 211, 211);
+  border-right: 3px  rgb(38 42 43);
 }
 
 .profileInfoText {
