@@ -21,7 +21,13 @@
 .navBar a:hover {
   color: #f88e05;
 }
+.footerCols a:hover {
+  color: #f88e05;
+}
 
+/* .footerCols icon:hover {
+  color: #f88e05;
+} */
 .navBar .mainLogo {
   font-size: 3rem;
   font-weight: 900;
@@ -34,7 +40,17 @@
 .navBar .mainLogo span {
   color: #f88e05;
 }
+ .log{
+  color: rgb(231, 231, 231);
+  border-color: #f88e05 ;
+  
 
+}
+
+.log:hover{
+  background-color: #f88e05;
+  
+}
 .videoContainer {
   max-height: 85vh;
   overflow: hidden;
@@ -120,24 +136,24 @@
 }
 
 .footer {
-  background-color:solid rgb(211, 211, 211);
-  color: #252525;
+  background-color: rgb(38 42 43);
+  color: #e0e0e0;
   text-align: center;
-  background-color: whitesmoke;
+  background-color:#252525 ;
   padding-top: 25px;
   min-height: 25vh;
 }
 
 .footer a {
   display: block;
-  color: black;
+  color: rgb(231, 231, 231);
   text-decoration: none;
   padding: 5px 50px;
   font-size: 1.3rem;
 }
 
 .footerCols {
-  border-right: 3px  rgb(38 42 43);
+  border-right: 3px solid#ffad01;
 }
 
 .profileInfoText {

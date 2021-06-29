@@ -5,15 +5,17 @@ import Col from "react-bootstrap/Col";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faInstagram, faFacebook , faTwitter, faGithub}  from '@fortawesome/free-brands-svg-icons'
 // import { fab } from '@fortawesome/free-brands-svg-icons'
+import { Link } from 'react-router-dom';
 
 export class Footer extends Component {
   render() {
     return (
       <div className='footer'>
         <Container fluid>
+          
           <Row className="footerRow">
             <Col lg={4} className="footerCols">
-              <h4>About</h4>
+              <h4 >About us </h4>
               <p> 
               We want to help you live a fit and healthy life style !
                We do this by helping you find the most suitable equipment for your home gym ,
@@ -29,7 +31,7 @@ export class Footer extends Component {
                   <a href="/Home">Home</a>
                 
                 
-                  <a href="/profile">Profile</a>
+                  
                 
                 
                   <a href="/products">Products</a>
@@ -42,10 +44,10 @@ export class Footer extends Component {
             <Col lg={4} className="footerCols">
               <h4>Contact Us</h4>
               <div>
-                    <FontAwesomeIcon icon={faGithub} size="2x"/>
-                    <FontAwesomeIcon icon={faFacebook} size="2x"/>
-                    <FontAwesomeIcon icon={faTwitter} size="2x"/>
-                    <FontAwesomeIcon icon={faInstagram} size="2x" />
+              <a href ="https://github.com" target="_blank"> <FontAwesomeIcon icon={faGithub} size="2x" /></a>
+              <a href="https://web.facebook.com" target="_blank"><FontAwesomeIcon icon={faFacebook} size="2x"/></a>
+              <a href="https://twitter.com" target="_blank">  <FontAwesomeIcon icon={faTwitter} size="2x"/></a>
+              <a href="https://www.instagram.com" target="_blank">   <FontAwesomeIcon icon={faInstagram} size="2x" /></a>
 
                 </div>
             </Col>

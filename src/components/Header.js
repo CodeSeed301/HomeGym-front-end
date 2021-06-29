@@ -21,7 +21,7 @@ export class Header extends Component {
               <Link to="/about">About us</Link>
             </Nav>
             <Form>
-              <Button variant="outline-warning">Login</Button>
+              <Button variant="outline-warning" className="log">Login</Button>
             </Form>
           </Navbar.Collapse>
         </Navbar>
