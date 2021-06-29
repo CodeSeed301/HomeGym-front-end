@@ -45,14 +45,14 @@ class OneProduct extends Component {
           <Card.Body>
             <Card.Title style={{fontSize: "1.5rem"}}>{this.props.title.toUpperCase()}</Card.Title>
             <Card.Text>{this.props.description}</Card.Text>
-            <Card.Text style={{color:"red"}}>{this.props.price}JD   <s>{parseInt(this.props.price) + 100} JD</s> </Card.Text>
+            <Card.Text style={{color:"red"}}>{this.props.price}JD   <s>{parseInt(this.props.price) * 1.25} JD</s> </Card.Text>
 
             {isAuthenticated ? (
               this.props.isInCart ? (
                 <p
                   style={{
                     display: "inline-block",
-                    border: "2px solid white",
+                    border: "2px solid black",
                     padding: "6px 10px",
                     borderRadius: "4px",
                   }}
@@ -60,7 +60,7 @@ class OneProduct extends Component {
                   Already added
                 </p>
               ) : (
-                <Button onClick={() => this.props.setCart(this.props.title, this.props.price)} variant="danger" >
+                <Button onClick={() => this.props.setCart(this.props.title, this.props.price)} variant="warning" >
                   🛒 ADD TO CART
                 </Button>
               )
