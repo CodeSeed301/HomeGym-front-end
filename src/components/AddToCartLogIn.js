@@ -8,12 +8,12 @@ const AddToCartLogIn = () => {
   return (
     !isAuthenticated && (
       <Button
-        variant="outline-warning"
+        variant="warning"
         onClick={() => {
           loginWithRedirect();
         }}
       >
-        🛒 ADD TO CART
+        🛒 Login to ADD TO CART
       </Button>
     )
   );
