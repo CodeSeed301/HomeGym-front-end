@@ -1,29 +1,48 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+* {
+    font-family: "Poppins", sans-serif;
+
+
+} 
 .aboutUs {
     text-align: center;
     background-color: #ddd;
     padding-bottom: 40px;
 }
 
-.ourStory {
+.ourStory  {
     color: #252525;
-    padding-top: 30px;
-    font-weight: 500;
-    font-family: "Lobster", cursive;
+    padding-top: 40px;
+    font-weight: 700;
+    
+    font-family: "Poppins", sans-serif;
 }
+/* 
+Card.Title{
+    color: #252525;
+    padding-top: 40px;
+    font-weight: 500;
+} */
+
 
 .ourTeam {
     border-bottom: 1px solid gray;
     width: 60%;
     margin: auto;
-    margin-bottom: 15px;
+    margin-bottom: 21px;
     padding-bottom: 5px;
     color: #252525;
-    padding-top: 30px;
-    font-weight: 300;
-    font-family: "Lobster", cursive;
+    padding-top: 28px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
     font-size: 28px;
 }
+
+.ourTeam img{
+    width:40px
+   
+}
+
 
 
 /* hr.style-four {
@@ -55,6 +74,10 @@ hr.style-four:after {
     background-color: inherit;
     border: none;
     margin: auto;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+  
+    
 }
 
 .cardHead {
@@ -109,8 +132,9 @@ hr.style-four:after {
 }
 
 .emailImg {
-    width: 350px;
+    width: 400px;
     margin: auto;
+    margin-right: 20px;
 }
 
 .modal-dialog {
