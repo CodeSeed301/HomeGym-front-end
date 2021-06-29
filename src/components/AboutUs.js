@@ -26,6 +26,9 @@ class AboutUs extends Component {
       userFirstName: "",
     };
   }
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
 
   changeArrow = () => {
     this.setState({

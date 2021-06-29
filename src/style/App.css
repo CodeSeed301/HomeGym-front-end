@@ -21,7 +21,13 @@
 .navBar a:hover {
     color: #f88e05;
 }
+.footerCols a:hover {
+  color: #f88e05;
+}
 
+/* .footerCols icon:hover {
+  color: #f88e05;
+} */
 .navBar .mainLogo {
     font-size: 3rem;
     font-weight: 900;
@@ -34,7 +40,17 @@
 .navBar .mainLogo span {
     color: #f88e05;
 }
+ .log{
+  color: rgb(231, 231, 231);
+  border-color: #f88e05 ;
+  
 
+}
+
+.log:hover{
+  background-color: #f88e05;
+  
+}
 .videoContainer {
     max-height: 85vh;
     overflow: hidden;
@@ -154,20 +170,27 @@
 }
 
 .footer {
-    background-color: rgb(38 42 43);
-    color: #252525;
-    text-align: center;
-    background-color: #f88e05;
-    padding-top: 25px;
-    min-height: 25vh;
+  background-color: rgb(38 42 43);
+  color: #e0e0e0;
+  text-align: center;
+  background-color:#252525 ;
+  padding-top: 25px;
+  min-height: 25vh;
 }
 
 .footer a {
-    display: block;
+  /* display: block; */
+  color: rgb(231, 231, 231);
+  text-decoration: none;
+  padding: 5px 15px;
+  font-size: 1.3rem;
 }
 
 .footerCols {
-    border-right: 3px solid rgb(211, 211, 211);
+  border-right: 3px solid#ffad01;
+}
+.footerCols h4{
+    color:#ffad01
 }
 
 .profileInfoText {
@@ -314,4 +337,17 @@ transform: translate(-50%,50%);
     font-size: 1.5rem;
     border-radius: 5px;
     cursor: pointer;
+}
+.footerIconContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 60%;
+}
+.footerIconContainer a{
+    font-size: 1.5rem;
+}
+.footerCols:last-child{
+    border:none
 }
