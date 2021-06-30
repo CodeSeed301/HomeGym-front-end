@@ -3,7 +3,6 @@ import OneProduct from "./OneProduct";
 import FilterData from "./FilterData";
 import axios from "axios";
 import { withAuth0 } from "@auth0/auth0-react";
-import "../style/Product.css";
 class Products extends Component {
   constructor(props) {
     super(props);
@@ -11,6 +10,7 @@ class Products extends Component {
       productsData: [],
       cart: [],
       filteredData: [],
+      searchedItem: "",
     };
   }
   componentDidMount = () => {
@@ -59,10 +59,26 @@ class Products extends Component {
       })
       .catch((error) => alert(error.message));
   };
+
+  dynamicSearchedItem = (e) => {
+    let newFilteredData = this.state.productsData.filter((itemName) =>
+      itemName.name.toLowerCase().includes(e.target.value.toLowerCase())
+    );
+    this.setState({
+      filteredData: newFilteredData,
+      searchedItem: e.target.value,
+    });
+  };
+
   render() {
     return (
-      <div style={{ width: "80%", margin: "auto" }}>
-        <FilterData filterResult={this.filterResult} productsData={this.state.productsData} />
+      <div style={{ width: "80%", margin: "auto", minHeight: "60vh" }}>
+        <FilterData
+          filterResult={this.filterResult}
+          productsData={this.state.productsData}
+          searchedItem={this.state.searchedItem}
+          dynamicSearchedItem={this.dynamicSearchedItem}
+        />
         {this.state.filteredData.map((product, index) => {
           return (
             <OneProduct

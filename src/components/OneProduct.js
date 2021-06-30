@@ -5,8 +5,8 @@ import Exercise from "./Exercise";
 import AddToCartLogIn from "./AddToCartLogIn";
 import axios from "axios";
 import { withAuth0 } from "@auth0/auth0-react";
-import AOS from "aos"
-import "aos/dist/aos.css"
+import AOS from "aos";
+import "aos/dist/aos.css";
 class OneProduct extends Component {
   constructor(props) {
     super(props);
@@ -18,9 +18,8 @@ class OneProduct extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);
     AOS.init({
-        // initialise with other settings
-        duration : 2000
-      });
+      duration: 2000,
+    });
   }
   setShowExercise = (id) => {
     axios.get(`http://localhost:8080/exercises?equipmentId=${id}`).then((res) => {
@@ -36,25 +35,30 @@ class OneProduct extends Component {
     return (
       <>
         <Card
-        data-aos="fade-up"
+          data-aos="fade-up"
           style={{
             display: "grid",
             gridTemplateColumns: "270px 1fr",
-            marginTop: "30px",
+            marginBottom: "30px",
             background: "#eee",
             color: "black",
             padding: "10px",
-         
-           
           }}
         >
           <Card.Body>
-            <Card.Img style={{ width: "250px" , maxHeight:"250px" }} variant="top" src={this.props.image_url} alt={this.props.title} />
+            <Card.Img
+              style={{ width: "250px", maxHeight: "250px" }}
+              variant="top"
+              src={this.props.image_url}
+              alt={this.props.title}
+            />
           </Card.Body>
           <Card.Body>
-            <Card.Title style={{fontSize: "1.5rem"}}>{this.props.title.toUpperCase()}</Card.Title>
+            <Card.Title style={{ fontSize: "1.5rem" }}>{this.props.title.toUpperCase()}</Card.Title>
             <Card.Text>{this.props.description}</Card.Text>
-            <Card.Text style={{color:"red"}}>{this.props.price}JD   <s>{parseInt(this.props.price) * 1.25} JD</s> </Card.Text>
+            <Card.Text style={{ color: "red" }}>
+              {this.props.price}JD <s>{parseInt(this.props.price) * 1.25} JD</s>
+            </Card.Text>
 
             {isAuthenticated ? (
               this.props.isInCart ? (
@@ -69,7 +73,7 @@ class OneProduct extends Component {
                   Already added
                 </p>
               ) : (
-                <Button onClick={() => this.props.setCart(this.props.title, this.props.price)} variant="warning" >
+                <Button onClick={() => this.props.setCart(this.props.title, this.props.price)} variant="warning">
                   🛒 ADD TO CART
                 </Button>
               )
@@ -78,7 +82,7 @@ class OneProduct extends Component {
             )}
             <Button
               onClick={() => this.setShowExercise(this.props.id)}
-              style={{ marginLeft: "25px" , color:"black " }}
+              style={{ marginLeft: "25px", color: "black " }}
               variant="outline-warning"
             >
               SHOW EXERCISE
