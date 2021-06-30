@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Card from 'react-bootstrap/Card'
 import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
 export class EmptyCart extends Component {
     render() {
         return (

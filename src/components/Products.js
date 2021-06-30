@@ -4,6 +4,7 @@ import FilterData from "./FilterData";
 import axios from "axios";
 import { withAuth0 } from "@auth0/auth0-react";
 import "../style/Product.css";
+import AddItemModal from "./AddItemModal";
 class Products extends Component {
   constructor(props) {
     super(props);
@@ -11,6 +12,7 @@ class Products extends Component {
       productsData: [],
       cart: [],
       filteredData: [],
+      showAddItemModal:false
     };
   }
   componentDidMount = () => {
@@ -44,6 +46,9 @@ class Products extends Component {
     }
   };
   setCart = (productName, price) => {
+    // this.setState({
+      
+    // })
     const reqBody = {
       email: this.props.auth0.user.email,
       title: productName,
@@ -55,6 +60,12 @@ class Products extends Component {
       .then((respsnon) => {
         this.setState({
           cart: respsnon.data.equipment,
+          showAddItemModal:true
+        }
+        ,()=>{
+          window.setTimeout(()=>{
+            this.setState({showAddItemModal:false})
+          },1000)
         });
       })
       .catch((error) => alert(error.message));
@@ -62,6 +73,9 @@ class Products extends Component {
   render() {
     return (
       <div style={{ width: "80%", margin: "auto" }}>
+        {
+          this.state.showAddItemModal&& <AddItemModal showAddItemModal={this.state.showAddItemModal}/>
+        }
         <FilterData filterResult={this.filterResult} productsData={this.state.productsData} />
         {this.state.filteredData.map((product, index) => {
           return (
