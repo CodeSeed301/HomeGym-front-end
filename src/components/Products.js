@@ -84,7 +84,7 @@ class Products extends Component {
   render() {
     return (
 
-      <div style={{ width: "80%", margin: "auto", minHeight: "60vh" }}>
+      <div style={{ width: "80%", margin: "auto", minHeight: "65vh" }}>
       {
           this.state.showAddItemModal&& <AddItemModal showAddItemModal={this.state.showAddItemModal}/>
         }
