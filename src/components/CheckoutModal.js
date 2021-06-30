@@ -14,7 +14,6 @@ export class CheckoutModal extends Component {
     }
 
     render() {
-        console.log(this.state.myCartData);
         let total = 0;
         return (
             <div>
@@ -54,9 +53,7 @@ export class CheckoutModal extends Component {
                                                 <td>Total : {total}</td>
                                             </tr>
                                         </Table>
-                                        {
-                                            console.log(total)
-                                        }
+                                        
 
                                     </Col>
                                 </Row>

@@ -54,7 +54,7 @@ class Blog3 extends Component {
 
           <img
             className="secondImg"
-            src="https://www.sponser.ch/cms/fileadmin/_processed_/2/2/csm_Energy_Endurance_94c7245bf5.jpg"
+            src="https://www.sponser.ch/cms/fileadmin/_processed_/2/2/csm_Energy_Endurance_94c7245bf5.jpg" alt='blog3img'
           />
           <h4 className="subTitles">Exercise and stress</h4>
           <p className="paragraphs">

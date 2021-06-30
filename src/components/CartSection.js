@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import cartIcon from "../assets/images/cartIcon.png";
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import RowCartSection from "./RowCartSection";
 import CheckoutModal from "./CheckoutModal"

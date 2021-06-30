@@ -22,7 +22,7 @@ export class profile extends Component {
     };
   }
   handlePlaceOrder = () => {
-    axios.delete(`http://localhost:8080/product/100?email=${this.state.userEmail}`).then(response=>console.log("ee",response.data)).then(
+    axios.delete(`http://localhost:8080/product/100?email=${this.state.userEmail}`).then(
       this.setState({
         alert: true,
         myCart: [],
@@ -31,7 +31,7 @@ export class profile extends Component {
           this.setState({alert:false})
         },5000)
       })
-    ).catch(error=>console.log("ee",error.message));
+    ).catch(error=>alert(error.message));
     
   }
 
@@ -44,7 +44,6 @@ export class profile extends Component {
     axios
       .get(`http://localhost:8080/profile?email=${email}`)
       .then((response) => {
-        console.log("didmount", response.data.equipment);
         this.setState({
           myCart: response.data.equipment,
         });
@@ -60,7 +59,6 @@ export class profile extends Component {
     axios
       .delete(`http://localhost:8080/product/${index}?email=${this.state.userEmail}`)
       .then((response) => {
-        console.log("deletFunction", response.data.equipment);
         this.setState({
           myCart: response.data.equipment,
         });
