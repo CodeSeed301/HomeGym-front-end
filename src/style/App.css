@@ -312,29 +312,29 @@
 }
 .opacityIgnoreCart h2{
     position: absolute;
-    top:30%;
+    top:50%;
     left:50%;
-    transform: translate(-50%,50%);
+    transform: translate(-50%,-50%);
     font-size: 3rem;
 }
 
 .emptyCartBtn{
     text-decoration: none;
     background-color: #f88e05;
-    color: #e0e0e0;
+    color: #eeeeee;
     padding:10px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border-radius: 5px;
 position: absolute;
-top:45%;
-left:50%;
-transform: translate(-50%,50%);
+top:30px;
+right:30px;
+/* transform: translate(-50%,50%); */
 }
 .emptyCartBtn:hover{
     text-decoration: none;
     background-color:rgb(34 34 34) ;
     color: #f88e05;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border-radius: 5px;
     cursor: pointer;
 }
