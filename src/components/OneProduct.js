@@ -5,6 +5,8 @@ import Exercise from "./Exercise";
 import AddToCartLogIn from "./AddToCartLogIn";
 import axios from "axios";
 import { withAuth0 } from "@auth0/auth0-react";
+import AOS from "aos"
+import "aos/dist/aos.css"
 class OneProduct extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +15,13 @@ class OneProduct extends Component {
       exerciseData: [],
     };
   }
-
+  componentDidMount() {
+    window.scrollTo(0, 0);
+    AOS.init({
+        // initialise with other settings
+        duration : 2000
+      });
+  }
   setShowExercise = (id) => {
     axios.get(`http://localhost:8080/exercises?equipmentId=${id}`).then((res) => {
       this.setState({
@@ -28,6 +36,7 @@ class OneProduct extends Component {
     return (
       <>
         <Card
+        data-aos="fade-up"
           style={{
             display: "grid",
             gridTemplateColumns: "270px 1fr",

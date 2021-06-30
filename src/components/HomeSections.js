@@ -9,25 +9,34 @@ import CardBlog1 from "./CardBlog1";
 import CardBlog2 from "./CardBlog2";
 import CardBlog3 from "./CardBlog3";
 import CardBlog4 from "./CardBlog4";
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 export class HomeSections extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+    AOS.init({
+        // initialise with other settings
+        duration : 1500
+      });
+  }
   render() {
     return (
       <div>
         <Container className="cardsContainer" fluid>
           <Row className="justify-content-md-center">
-            <Col xs lg="4">
+            <Col xs lg="4" data-aos="fade-right">
               <CardBlog1 />
             </Col>
-            <Col xs lg="4">
+            <Col xs lg="4" data-aos="fade-left">
               <CardBlog2 />
             </Col>
           </Row>
           <Row className="justify-content-md-center">
-            <Col xs lg="4">
+            <Col xs lg="4" data-aos="fade-right">
               <CardBlog3 />
             </Col>
-            <Col xs lg="4">
+            <Col xs lg="4" data-aos="fade-left">
               <CardBlog4 />
             </Col>
           </Row>
@@ -51,8 +60,8 @@ export class HomeSections extends Component {
                   discount on all products. As always, HomeGym is your best choice throughout the year. Stay tuned for
                   more upcoming surprises.
                 </p>
-                <Link to="/products">
-                  <Button variant="warning">GET THE CHANCE !!</Button>
+                <Link to="/products" >
+                  <Button  variant="warning" data-aos="flip-right">GET THE CHANCE !!</Button>
                 </Link>
               </div>
             </Col>
