@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+/* @import CartImage from "../assets/images/cartImage.png"; */
+
+.navBar {
+    background-color: #222222;
+    flex-direction: column;
+}
+
+.navBar a {
+    color: rgb(231, 231, 231);
+    text-decoration: none;
+    padding: 5px 50px;
+    font-size: 1.3rem;
+}
+
+.navBar a:hover {
+    color: #f88e05;
+}
+
+.footerCols a:hover {
+    color: #f88e05;
+}
+
+/* .footerCols icon:hover {
+  color: #f88e05;
+} */
+
+.navBar .mainLogo {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.navBar .mainLogo:hover {
+    color: rgb(231, 231, 231);
+}
+
+.navBar .mainLogo span {
+    color: #f88e05;
+}
+
+.log {
+    color: rgb(231, 231, 231);
+    border-color: #f88e05;
+}
+
+.log:hover {
+    background-color: #f88e05;
+}
+
+.videoContainer {
+    max-height: 85vh;
+    overflow: hidden;
+    opacity: 1;
+    position: relative;
+    background: #ffad01;
+    text-align: left;
+}
+
+.heroText {
+    position: absolute;
+    color: rgb(233, 233, 233);
+    background-color: #00000067;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.heroText h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.heroText p {
+    max-width: 30%;
+    font-size: large;
+    font-weight: 700;
+}
+
+.cardsContainer {
+    background-image: url(https://images01.nicepage.com/b0/86/b086440b4129deee9b7e080e211e25a7.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    padding: 5% 0;
+}
+
+.justify-content-md-center {
+    padding: 15px;
+    margin: 0px;
+}
+
+.homeCard {
+    background-image: url(https://images01.nicepage.com/a1/8f/a18f26bfaeebb534e0cd8ae11d2dbf6a.png);
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    color: whitesmoke;
+}
+
+.homeCard img {
+    max-width: 200px;
+    position: absolute;
+    right: 0;
+}
+
+.homeCard:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.cardText {
+    max-width: 50%;
+    position: absolute;
+    left: 7%;
+    top: 10%;
+}
+
+.sectionContainerRow {
+    background-image: url(https://images01.nicepage.com/7d/79/7d79c186cf8f781868ee6673d898bfcb.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sectionContainerTextCol {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.textHolder {
+    width: 75%;
+    margin: auto;
+}
+
+.textHolder h2 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.discount {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.textHolder button {
+    width: 50%;
+    height: 50px;
+    font-weight: 600;
+    background-color: #f88e05;
+}
+
+.textHolder button:hover {
+    color: white;
+    background-color: #252525;
+    border: none;
+}
+
+.pic1 {
+    width: 100%;
+    padding-right: 40px;
+    padding-bottom: 70px;
+}
+
+.footer {
+    background-color: rgb(38 42 43);
+    color: #e0e0e0;
+    text-align: center;
+    background-color: #252525;
+    padding-top: 12px;
+    max-height: 20vh;
+    overflow: hidden;
+    font-size: 15px;
+}
+
+.footer a {
+    color: rgb(231, 231, 231);
+    text-decoration: none;
+    padding: 5px 15px;
+}
+
+.footerCols {
+    border-right: 3px solid#ffad01;
+}
+
+.footerCols h4 {
+    margin-bottom: 3px;
+    font-size: 18px;
+    color: #ffad01;
+}
+
+.footerCols p {
+    font-size: 13px;
+}
+
+.footerIconContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+.footerCols:last-child {
+    border: none;
+}
+
+.iconItem {
+    font-size: 10px;
+}
+
+.profileInfoText {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileInfoImg {
+    min-width: 250px;
+    max-height: 250px;
+}
+
+.profileInfoContainer {
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 100px;
+    background-color: rgb(243, 243, 243);
+    color: #242424;
+}
+
+.cartMainContainer {
+    max-width: 70%;
+    padding: 20px;
+    border: 5px solid rgb(56, 56, 56);
+}
+
+.cardHeaderProfilePage {
+    font-size: 1.5rem;
+    background-color: rgb(34, 34, 34);
+    color: whitesmoke;
+}
+
+.cartContainerHeader img {
+    max-width: 30px;
+    max-height: 40px;
+}
+
+.cartContainerHeader h2 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.cartContainerBody {
+    background-color: rgb(243, 243, 243);
+    color: #111111;
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.TitleRowCart {
+    border: 2px solid black;
+    padding: 5px;
+    margin: 5px 0;
+    background: #222222;
+    font-size: 1.3rem;
+    color: #f88e05;
+}
+
+.showQuantity {
+    width: 70px;
+    display: inline-block;
+}
+
+.RowCartItem {
+    border: 1px solid rgb(36, 36, 36);
+    padding: 5px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.cont {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.profileContainer {
+    margin: 40px auto;
+}
+
+.checkoutBtn {
+    background-color: #252525;
+    color: #f88e05;
+    padding: 5px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+.checkoutBtn:hover {
+    background-color: #f88e05;
+    color: #252525;
+}
+
+.emptyCartContainer {
+    overflow: hidden;
+    border: none;
+    min-height: 70vh;
+    color: whitesmoke;
+    position: relative;
+    background-color: #3a3a3ad2;
+}
+
+.opacityIgnoreCart img {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.opacityIgnoreCart h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+}
+
+.emptyCartBtn {
+    text-decoration: none;
+    background-color: #f88e05;
+    color: #eeeeee;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    /* transform: translate(-50%,50%); */
+}
+
+.emptyCartBtn:hover {
+    text-decoration: none;
+    background-color: rgb(34 34 34);
+    color: #f88e05;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
