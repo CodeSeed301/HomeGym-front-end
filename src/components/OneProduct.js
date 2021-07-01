@@ -22,7 +22,7 @@ class OneProduct extends Component {
     });
   }
   setShowExercise = (id) => {
-    axios.get(`http://localhost:8080/exercises?equipmentId=${id}`).then((res) => {
+    axios.get(`${process.env.REACT_APP_SERVER_URL}/exercises?equipmentId=${id}`).then((res) => {
       this.setState({
         exerciseData: res.data,
         showExercise: !this.state.showExercise,

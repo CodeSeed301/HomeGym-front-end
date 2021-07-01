@@ -22,7 +22,7 @@ export class profile extends Component {
     };
   }
   handlePlaceOrder = () => {
-    axios.delete(`http://localhost:8080/product/100?email=${this.state.userEmail}`).then(
+    axios.delete(`${process.env.REACT_APP_SERVER_URL}/product/100?email=${this.state.userEmail}`).then(
       this.setState({
         alert: true,
         myCart: [],
@@ -42,7 +42,7 @@ export class profile extends Component {
   componentDidMount = () => {
     const email = this.state.userEmail;
     axios
-      .get(`http://localhost:8080/profile?email=${email}`)
+      .get(`${process.env.REACT_APP_SERVER_URL}/profile?email=${email}`)
       .then((response) => {
         this.setState({
           myCart: response.data.equipment,
@@ -57,7 +57,7 @@ export class profile extends Component {
 
   deleteMyitem = (index) => {
     axios
-      .delete(`http://localhost:8080/product/${index}?email=${this.state.userEmail}`)
+      .delete(`${process.env.REACT_APP_SERVER_URL}/product/${index}?email=${this.state.userEmail}`)
       .then((response) => {
         this.setState({
           myCart: response.data.equipment,
@@ -80,7 +80,7 @@ export class profile extends Component {
     };
 
     axios
-      .put(`http://localhost:8080/product/${index}`, reqBody)
+      .put(`${process.env.REACT_APP_SERVER_URL}/product/${index}`, reqBody)
       .then((response) => {
         this.setState({
           myCart: response.data.equipment,

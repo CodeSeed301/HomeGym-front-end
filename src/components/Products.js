@@ -17,11 +17,11 @@ class Products extends Component {
   }
   componentDidMount = () => {
     axios
-      .get("http://localhost:8080/equipments")
+      .get(`${process.env.REACT_APP_SERVER_URL}/equipments`)
       .then(async (response) => {
         let cart = [];
         if (this.props.auth0.user) {
-          let res2 = await axios.get(`http://localhost:8080/profile?email=${this.props.auth0.user.email}`);
+          let res2 = await axios.get(`${process.env.REACT_APP_SERVER_URL}/profile?email=${this.props.auth0.user.email}`);
           cart = res2.data.equipment;
         }
         this.setState({
@@ -56,7 +56,7 @@ class Products extends Component {
       price: price,
     };
     axios
-      .post("http://localhost:8080/product", reqBody)
+      .post(`${process.env.REACT_APP_SERVER_URL}/product`, reqBody)
       .then((respsnon) => {
         this.setState({
           cart: respsnon.data.equipment,
